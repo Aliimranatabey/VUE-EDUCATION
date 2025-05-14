@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="first-app">
+    <h2>İsim :{{firstVariable}}</h2>
+    <p>Meslek :{{secondVariable}}</p>
+    <p>Yaş : {{age}}</p>
+    <hr>
+    <p>Giyim: {{clothing}}</p>
+    <p>Şapka Var Mı?: {{clothing.hat}}</p>
+    <p>Pantolon Türü: {{clothing.pants}}</p>
+    <p>Tshirt Var Mı?: {{clothing.tshirt}}</p>
+    <hr>
+    <p>Yetenekler: {{skills[0]}}</p>
+    <p>Yetenekler: {{skills[1]}}</p>
+    </div>
+</body>
+<!--createapp bir yorum satırı olduğu için aşağıdaki gibi bir yapı kullanılır. 
+    createapp'in içerisine yazılanlar girdi objelerdir. 
+    ekrana yazdırmak istiyorsak eğer .mount kullanırız.
+    ekrana yazdırmak istediğimiz şey ID ise başına # koyarız
+    ekrana yazdırmak istediğimiz şey class ise başına . koyarız
+    createapp içerisindeki data() da bir methot olduğu için girdi alacağı () parantezleri ve methot olduğu için return'ü bulunacak-
+    return bir objedir ve bu objenin içerisinde bulunan tüm değişkenler bütün Vue.js içerisinde kullanılabilir-->
+<script src="try_myself_index.js"></script>
+</html>
