@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header>
+        <h1>Frontend de öğrenmemiz gerekenler</h1>
+    </header>
+
+    <section id="frontend">
+        <h2>Event Binding</h2>
+        <!-- Short @click -->
+        <button @click="add(5)">5 Arttır</button>
+        <button @click="reduce(5)">5 Azalt</button>
+        <!-- V-once ile başlangıç değerini sabitledik. -->
+        <p v-once>Sonuç: {{counter}}</p>
+        <p>Sonuç: {{counter}}</p>
+        <!-- <input v-bind:value="name" type="text" v-on:input="setName($event)"> -->
+         <!-- Yukarıdaki iki farklı bağlama işlemini daha kısa bir şekilde yazmamızı sağlayan "v-model" kullanımını aşağıda gösteriyorum -->
+        <!-- Short :value , v-bind'ı temsil eder oradaki : iki nokta -->
+         <input :value="Ali" v-model="name">
+        <input v-model="lastName">
+        <button v-on:click="reset">Resetle</button>
+        <p>Adınız : {{fullNameComputed}}</p>
+
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
