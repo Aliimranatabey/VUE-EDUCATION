@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header>
+        <h1>Frontend de öğrenmemiz gerekenler</h1>
+    </header>
+
+    <section id="frontend">
+        <h1>Vue Temelleri Genel Tekrar Egzersizi</h1>
+        <input v-model.number="number1">
+        <input v-model.number="number2">
+        <p>Computed Toplam {{sum}}</p>
+        <p>Method Toplam {{sumMethod()}}</p>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
