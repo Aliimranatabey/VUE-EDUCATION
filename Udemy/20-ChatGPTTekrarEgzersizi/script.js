@@ -3,6 +3,7 @@ const app=Vue.createApp({
         return{
             number1:0,
             number2:0,
+            number3:0,
         };
     },
     watch:{
@@ -10,14 +11,18 @@ const app=Vue.createApp({
     },
     computed:{
         sum(){
-            console.log('Computed Tetiklendi')
+            console.log('Computed Tetiklendi');
             return this.number1+this.number2;
         }
     },
     methods: {
         sumMethod(){
-            console.log('Method Tetiklendi')
+            console.log('Method Tetiklendi');
             return this.number1+this.number2;
+        },
+        login(event){
+            event.preventDefault();
+            alert('Giriş Yapıldı');
         }
     },
 });
