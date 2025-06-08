@@ -4,6 +4,15 @@ const app=Vue.createApp({
             number1:0,
             number2:0,
             number3:0,
+            // Dinamik kaynaklar
+            imageUrl: 'https://vuejs.org/images/logo.png',
+            linkUrl:  'https://vuejs.org/',
+            // Buton’un başlangıç durumu
+            isDisabled: false,
+            rawHtml: '<p style="color:red">Kırmızı <strong>yazı</strong></p>',
+            randomNumber:0,
+            randomText:'Sıfır',
+            message:'mesaj'
         };
     },
     watch:{
@@ -23,6 +32,26 @@ const app=Vue.createApp({
         login(event){
             event.preventDefault();
             alert('Giriş Yapıldı');
+        },
+        // Buton durumunu tersine çevirir
+        toggleDisabled() {
+        this.isDisabled = !this.isDisabled;
+        },
+        pozitifOrNegatif(){
+            this.randomNumber=Math.floor(Math.random() * 21) - 10;
+            if(this.randomNumber>0){
+                this.randomText='Pozitif';
+                console.log(this.randomNumber)
+                return this.randomText;
+            }else if(this.randomNumber<0){
+                this.randomText='Negatif';
+                return this.randomText;
+            }else{
+                return this.randomText
+            }
+        },
+        messageChange(){
+            this.message='Yeni Mesaj'
         }
     },
 });

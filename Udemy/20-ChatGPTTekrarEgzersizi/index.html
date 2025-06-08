@@ -20,6 +20,24 @@
         <p>Computed Toplam {{sum}}</p>
         <p>Method Toplam {{sumMethod()}}</p>
         <button @click="login($event)"> Giriş Yap</button>
+        <h1>Dinamik Attribute Binding</h1>
+        <!-- Dinamik resim -->
+        <img :src="imageUrl" alt="Vue Logo" />
+        <!-- Dinamik link -->
+        <p>
+        <a :href="linkUrl" target="_blank">Vue Resmi Sitesi</a>
+        </p>
+        <!-- Dinamik buton pasif/aktif toggling -->
+        <button :disabled="isDisabled" @click="toggleDisabled">
+        {{ isDisabled ? 'Pasif' : 'Aktif' }}
+        </button>
+        <p>{{rawHtml}}</p>
+        <p v-html="rawHtml"></p>
+        <p>Random Oluşan Sayı Pozitif mi? Negatif mi? {{pozitifOrNegatif()}}</p>
+        <p v-once>{{ message }}</p>
+        <p>{{ message }}</p>
+        <button @click="messageChange()">Mesaj Değiş</button>
+
     </section>
 
     <script src="script.js" defer></script>
