@@ -1,7 +1,8 @@
 const app=Vue.createApp({
     data(){
         return{
-            number1:0,
+            number1: 0,
+            message: 'Henüz kontrol edilmedi',
             number2:0,
             number3:0,
             // Dinamik kaynaklar
@@ -16,7 +17,13 @@ const app=Vue.createApp({
         };
     },
     watch:{
-        
+        number1(newVal) {
+            if (newVal > 5) {
+                this.message = 'number1, 5\'ten büyük';
+            } else {
+                this.message = 'number1, 5\'ten küçük veya eşit';
+            }
+        }
     },
     computed:{
         sum(){
