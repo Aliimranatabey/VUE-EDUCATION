@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header>
+        <h1>Frontend de öğrenmemiz gerekenler</h1>
+    </header>
+
+    <section id="frontend">
+        <h2>Dinamik Stillendirme</h2>
+        <!-- Bir alt satırdaki kullanım klasik kullanımdır. Onun altındaki satır ise vue.js e özgü olan kullanımdır. -->
+        <!-- <div class="box" style="border-color: darkmagenta;" @click="chooseBox('1')"></div> -->
+        <div class="box" :style="{borderColor: firstBox ? 'darkmagenta' : 'gray'}" @click="chooseBox('1')"></div>
+        <div class="box" :style="{borderColor: secondBox ? 'darkmagenta' : 'gray'}" @click="chooseBox('2')"></div>
+        <div class="box" :style="{borderColor: thirdBox ? 'darkmagenta' : 'gray'}" @click="chooseBox('3')"></div>
+
+
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
