@@ -37,5 +37,6 @@ header{
 }
 
 .selected {
-    border-color: darkmagenta !important;
+    /* !important ile bordorColor'ı ezdik */
+    border-color: darkmagenta !important; 
 }
