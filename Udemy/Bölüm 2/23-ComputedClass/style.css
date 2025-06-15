@@ -1,0 +1,42 @@
+header{
+    padding: 15px;
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#frontend{
+    width: 100%;
+    max-width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    color: darkmagenta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#frontend .box{
+    width: 150px;
+    height: 150px;
+    border: 4px dashed gray;
+    margin: 30px 0px;
+}
+
+#frontend h2{
+    font-size: 30px;
+    border-bottom: 4px solid gray;
+}
+
+.selected {
+    /* !important ile bordorColor'ı ezdik */
+    border-color: darkmagenta !important; 
+}
