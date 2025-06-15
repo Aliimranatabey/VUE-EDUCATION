@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header>
+        <h1>Frontend de öğrenmemiz gerekenler</h1>
+    </header>
+
+    <section id="frontend">
+        <h2>Egzersiz</h2>
+        <!-- Bir tane inputa değer girip frontend yazısının rengini değiştiriniz -->
+
+        <input type="text" v-model="inputBackGround">
+        <input type="text" v-model="inputColor">
+        <p :style="{backgroundColor: inputBackGround, color: inputColor }">FRONTEND</p>
+
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
