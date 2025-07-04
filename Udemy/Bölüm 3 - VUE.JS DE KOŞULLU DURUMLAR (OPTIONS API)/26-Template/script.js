@@ -1,12 +1,12 @@
 const app=Vue.createApp({
     data(){
         return{
-            skills:['HTML']
+
         };
     },
     watch:{    },
     computed:{    },
-    methods: {      },
+    methods: {},
 });
 
 app.mount('#frontend')
