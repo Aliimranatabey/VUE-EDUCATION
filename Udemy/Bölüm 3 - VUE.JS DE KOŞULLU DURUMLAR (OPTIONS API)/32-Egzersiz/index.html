@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <header>
+        <h1>Frontend de öğrenmemiz gerekenler</h1>
+    </header>
+
+    <section id="frontend">
+        <h2>Yapılacaklar Listesi Uygulaması</h2>
+        <div class="frontendForm">
+            <input type="text" v-model="enteredTask">
+            <button @click="addTask()">Ekle</button>
+        </div>
+        <ul v-if="isVisible">
+            <li v-for="(task,index) in tasks" :key="index">{{task}}</li>
+        </ul>
+        
+        <button @click="toggleTasks()">{{isVisible ? 'Gizle' : 'Göster'}}</button>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
