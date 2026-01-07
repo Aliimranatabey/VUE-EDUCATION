@@ -1,18 +1,15 @@
 <template>
-  <h2>Öğrencilerim</h2>
+  <!-- <h2>Öğrencilerim</h2>
   <ul v-for="student in students" :key="student.name">
     <li>{{ student.name }} - {{ student.phone }}</li>
-  </ul>
-  <Student/>
+  </ul> -->
+  <div>Student Componenti</div>
 </template>
 
 <script>
-import Student from './components/Student.vue' 
+
 export default {
-  name: 'App',
-  components: {
-    Student
-  },
+  name: 'StudentInformation',
   data() {
     return {
       students: [
