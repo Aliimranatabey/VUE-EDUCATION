@@ -1,9 +1,9 @@
 <template>
-  <h2>Öğrencilerim</h2>
-  <ul v-for="student in data" :key="student.name">
-    <li>{{ student.name }} - {{ student.phone }}</li>
+  <ul>
+    <li><p>İsminiz:</p>{{ name }}</li>
+    <li><p>Telefonunuz:</p>{{ phone }}</li>
+    <li><p>E-postanız:</p>{{ email }}</li>
   </ul>
-  <div>{{ name }}</div>
 </template>
 
 <script>
@@ -12,7 +12,8 @@ export default {
   name: 'StudentInformation',
   props: [
     'name',
-    'data'
+    'phone',
+    'email'
   ],
   data() {
     }
